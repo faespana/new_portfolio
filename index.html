@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--2DO Exportamos la tipografia, la colocamos encima del boxicon ya que el link de boxicon tiene demasiado informacion que debe procesar-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+
+    <!--1ERO Se exporto los iconos de la pagina de boxicons, en la parte de USAGE -> Usage as a Font y luego se copia el link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="logo" href="/assets/img/Diseño_sin_título-removebg-preview.png" type="image/png">
+    <title>Portfolio</title>
+
+</head>
+
+<body>
+    <!--6TA Parte aqui comienza la construccion del header-->
+    <header class="header">
+        <!--9NA Parte se empieza con el nombramiento de las clases desde el header, el grid container es utilizado para que el navbar tenga max 1024px y se maneje como un grid acaba con el nombriamiento de las clases de los botones y las listas.-->
+        <nav class="navbar grid--container">
+            <!--Este es el LOGO (sacado de boxicoms) que queremos poner junto a nuestro nombre, ojo el nombre de su clase se llama navbar__logo debido a que esta dentro del navbar. -->
+            <a class="navbar__logo" href="#"><img class="img__logo" src="assets/img/Diseño_sin_título-removebg-preview.png" alt="logo">felosct7</a>
+            
+            <div class="navbar__menu">
+                <!--Este es el BOTON DE CERRADO (sacado de boxicoms)-->
+                <i class='bx bx-x navbar__icon btn__close'></i> <!--En el ultimo video esto estaba envuelto en un enlace 'a' (se recomienda un button) pero eso hacia que al abrir el menu en cualquier parte de mi pagina, se subia inmediatamente, al sacr del enlace y dejar solo la i, se evita eso.-->
+
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a class="navbar__link" href="#home">Home</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#about">About me</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#projects">Portfolio</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#contact">Contact me</a></li>
+                </ul>
+            </div>
+             <!--Este es el BOTON DE MENU de Hamburguesa (sacado de boxicoms)-->
+            <i class='bx bx-menu navbar__icon btn__open'></i>
+
+        </nav>
+
+    </header>
+
+    <!--7MA Parte aqui comienza la construccion de los sections y los footers...todos tienen un h2 de titulo y un div que envuelve el contenido-->
+    <main>
+        <!--8VA Parte se comienza a nombrar las clases-->
+        <section id="home" class="home">
+            <!--Aqui empieza la 12VA Parte si notan esta section no tiene titulo porque es como una presentación-->
+            <div class="home__container grid--container">
+
+                <div class="home__image">
+                    <span></span>
+                    <img src="/assets/img/toro-removebg-preview.png" alt="profile photo">
+                </div>
+
+                <ul class="home__social">
+                    <li class="home__social-item"><a class="home__social-link" target="_blank" href="https://www.linkedin.com/in/felipe-espa%C3%B1a-ord%C3%B3%C3%B1ez-38609197/"><i class='bx bxl-linkedin'></i></a></li>
+                    <li class="home__social-item"><a class="home__social-link" target="_blank" href="https://www.instagram.com/faespana/"><i class='bx bxl-instagram'></i></a></li>
+                    <li class="home__social-item"><a class="home__social-link" target="_blank" href="https://github.com/faespana"><i class='bx bxl-github'></i></a></li>
+                </ul>
+                <!--El home info no tiene tanto blah blah porque en el about nos vamos a deshogar con eso.-->
+                <div class="home__info">
+
+                    <h1 class="home__tittle">👋🏾 你好, soy Felipe España</h1>
+                    <p class="home__description">
+                        I'm a Front-end Developer, I like to learn about new technologies & travel around the world. Proudly ecuadorian 💛💙❤️
+                    </p>
+
+                </div>
+                <!--Aqui nos recomendaron que podemos poner otro boton que mande a descargar certificados entre otros-->
+                <div class="home__buttons">
+                    <button class="btn btn--primary" type="button">Download CV</button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="about" class="about section">
+
+            <h2 class="section__tittle">About me</h2>
+
+            <div class="about__container grid--container">
+
+                <p class="about__description">
+                    I am a person who believes that everything that is done with effort 💪🏾 and continuous learning 🤓 generates <i>great rewards.</i> <br><br>
+                    Self-taught researcher 🤖, I like to learn new programming languages and create web 📔 and mobile applications 📲. <br><br>
+                    I am from a large green province called Esmeraldas 💚🤍 located in the north of Ecuador, a lover 🤩 of its nature and beautiful beaches ⛱️. <strong>Enjoy life!!</strong>.
+                </p>
+
+                <div class="about__skills grid--container">
+
+                    <div class="about__cards">
+
+                        <div class="about__card">
+                            <i class="bx bxl-javascript"></i>
+                            <h3 class="about__card-tittle">JavaScript</h3>
+                            <p>During the learning of Java Script we carry out logical reasoning exercises and use variables, logical and comparison operators to obtain our results. We reduce our lines of code with functions and also use string and array methods along with conditionals and loops.</p>
+                        </div>
+
+                        <div class="about__card">
+                            <i class="bx bxl-html5"></i>
+                            <h3 class="about__card-tittle">HTML5</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, dolore! Iure harum laborum quis laboriosam, commodi quia facere ad nulla et iusto pariatur veritatis molestiae dolorem, repellendus nesciunt dicta nisi?</p>
+                        </div>
+
+                        <div class="about__card">
+                            <i class="bx bxl-css3"></i>
+                            <h3 class="about__card-tittle">CSS</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt impedit, tempore sunt error voluptates suscipit dolores saepe, quos amet optio similique ab in aliquam doloribus consequuntur modi, minima at magnam.</p>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="about__tags">
+
+                        <h3 class="about__tags-title">Skills</h3>
+
+                    <div class="about__tags-container">
+                        <span class="about__tag">Team-working</span>
+                        <span class="about__tag">Creative</span>
+                        <span class="about__tag">Punctual</span>
+                        <span class="about__tag">Responsible</span>
+                        <span class="about__tag">Proactive</span>
+                        <span class="about__tag">Self-taught</span>
+                    </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!--Aqui empieza la 15va parte-->
+        <section id="projects" class="projects section">
+
+            <h2 class="section__tittle">Portfolio</h2>
+
+            <div class= "projects__container grid--container">
+
+                <div class="projects__project">
+                    <!--Este es como si fuera el interior del proyecto-->
+                    <div class="projects__inner grid--container">
+
+                        <div class="projects__image">
+
+                            <img src="/assets/img/video1706814361.gif" alt="project 1">
+
+                        </div>
+
+                        <div class="projects__info">
+
+                            <h3 class="projects__name">Project 1</h3>
+
+                            <p class="projects__description">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore placeat, repellat provident, laboriosam quisquam alias explicabo voluptatum sed in accusamus cum impedit consequuntur? Deleniti voluptatum nisi quasi. Voluptas, est harum.
+                            </p>
+
+                            <div class="projects__buttons">
+                                <!--Es importante colocarle el tipo ya que el navegador se puede quejar-->
+                                <button class="btn projects__button" type="button"><a href="https://aesthetic-puffpuff-cb6031.netlify.app/" target = "_blank">Show Demo</a></button>
+                                <button class="btn projects__button" type="button">Show Code</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="projects__project">
+                    <!--Este es como si fuera el interior del proyecto-->
+                    <div class="projects__inner grid--container">
+
+                        <div class="projects__image">
+
+                            <img src="/assets/img/project2.png" alt="project 2">
+
+                        </div>
+
+                        <div class="projects__info">
+
+                            <h3 class="projects__name">Project 2</h3>
+
+                            <p class="projects__description">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore placeat, repellat provident, laboriosam quisquam alias explicabo voluptatum sed in accusamus cum impedit consequuntur? Deleniti voluptatum nisi quasi. Voluptas, est harum.
+                            </p>
+
+                            <div class="projects__buttons">
+                                <!--Es importante colocarle el tipo ya que el navegador se puede quejar-->
+                                <button class="btn projects__button" type="button">Show Demo</button>
+                                <button class="btn projects__button" type="button">Show Code</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="projects__project">
+                    <!--Este es como si fuera el interior del proyecto-->
+                    <div class="projects__inner grid--container">
+
+                        <div class="projects__image">
+
+                            <img src="/assets/img/project3.jpg" alt="project 3">
+
+                        </div>
+
+                        <div class="projects__info">
+
+                            <h3 class="projects__name">Project 3</h3>
+
+                            <p class="projects__description">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore placeat, repellat provident, laboriosam quisquam alias explicabo voluptatum sed in accusamus cum impedit consequuntur? Deleniti voluptatum nisi quasi. Voluptas, est harum.
+                            </p>
+
+                            <div class="projects__buttons">
+                                <!--Es importante colocarle el tipo ya que el navegador se puede quejar-->
+                                <button class="btn projects__button" type="button">Show Demo</button>
+                                <button class="btn projects__button" type="button">Show Code</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="projects__project">
+                    <!--Este es como si fuera el interior del proyecto-->
+                    <div class="projects__inner grid--container">
+
+                        <div class="projects__image">
+
+                            <img src="/assets/img/project4.png" alt="project 4">
+
+                        </div>
+
+                        <div class="projects__info">
+
+                            <h3 class="projects__name">Project 4</h3>
+
+                            <p class="projects__description">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore placeat, repellat provident, laboriosam quisquam alias explicabo voluptatum sed in accusamus cum impedit consequuntur? Deleniti voluptatum nisi quasi. Voluptas, est harum.
+                            </p>
+
+                            <div class="projects__buttons">
+                                <!--Es importante colocarle el tipo ya que el navegador se puede quejar-->
+                                <button class="btn projects__button" type="button">Show Demo</button>
+                                <button class="btn projects__button" type="button">Show Code</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="contact" class="contact section">
+
+            <h2 class="section__tittle">Contact</h2>
+
+            <div class="contact__container grid--container">
+
+                <div class="contact__info">
+
+                    <h3 class="contact__info-tittle">Info</h3>
+
+                    <p class="contact__info-description">
+                        Hello recruiters, friends and acquaintances, if you wish to obtain more information regarding the projects that I am carrying out and the courses and training that I am carrying out, you can do it at:
+                    </p>
+
+                    <address class="contact__info-data">
+
+                        <div class="contact__info-item">
+                            <i class="bx bx-phone"></i>
+                            <span class="contact__info-number">(+593) 985502731</span>
+                        </div>
+
+                        <div class="contact__info-item">
+                            <i class="bx bx-envelope"></i>
+                            <span class="contact__info-mail"><a href="mailto:felosct7@outlook.com">felosct7@outlook.com</a></span>
+                        </div>
+
+                        <div class="contact__info-item">
+                            <i class='bx bxs-map'></i>
+                            <span class="contact__info-map">Esmeraldas, Ecuador</span>
+                        </div>
+
+                    </address>
+
+                </div>
+
+                <div class="contact__form">
+
+                    <h3 class="contact__form-title">Send a Message</h3>
+
+                    <form id="form" class="contact__form-container">
+
+                        <div class="contact__form-group">
+                            <label for="name" class="contact__form-label">Name:</label>
+                            <input type="text" id="name" class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-group">
+                            <label for="email" class="contact__form-label">E-mail:</label>
+                            <input type="email" id="email" class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-group">
+                            <label for="message" class="contact__form-label">Message:</label>
+                            <textarea id="message" cols="40" rows="10" class="contact__form-input"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn contact__form-button">Send</button>
+
+                    </form>
+
+                </div>
+                
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer section">
+
+        <div class="footer__container grid--container">
+            
+            <div class="footer__info">
+
+                <h3 class="footer__tittle">Felipe España</h3>
+
+                <p class="footer__description">
+                    I'm a Front-end Developer, I like to learn about new technologies & travel around the world. Proudly ecuadorian 💛💙❤️
+                </p> 
+
+            </div>
+
+            <div class="footer__social">
+
+                <h3 class="footer__tittle">Social Networks</h3>
+
+                <ul class="footer__social-list">
+
+                    <li class="footer__social-item">
+                        <a target="_blank" href="https://www.linkedin.com/in/felipe-espa%C3%B1a-ord%C3%B3%C3%B1ez-38609197/" class="footer__social-link linkedin"><i class='bx bxl-linkedin'></i></a>
+                    </li>
+
+                    <li class="footer__social-item">
+                        <a target="_blank" href="https://www.instagram.com/faespana/" class="footer__social-link instagram"><i class='bx bxl-instagram'></i></a>
+                    </li>
+
+                    <li class="footer__social-item">
+                        <a target="_blank" href="https://github.com/faespana" class="footer__social-link github"><i class='bx bxl-github'></i></a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <p class="footer__copy">
+            &copy;2022, All rights reserved
+            
+        </p>
+
+    </footer>
+
+
+    <script>
+        const btnMenu = document.querySelector(".btn__open")
+        const btnClose = document.querySelector(".btn__close")
+        const Menu = document.querySelector(".navbar__menu")
+
+        btnMenu.onclick = function() {
+            Menu.classList.add("show--menu")
+        }
+
+        btnClose.onclick = function() {
+            Menu.classList.remove("show--menu")
+        }
+    </script>
+
+</body>
+</html>

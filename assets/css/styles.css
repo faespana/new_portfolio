@@ -1,0 +1,759 @@
+/*
+============================
+CSS TABLE CONTENT
+============================
+1.GOOGLE FONT
+2.VARIABLES CSS
+3.BASE
+4.REUSABLE CSS CLASSES
+5.HEADER & NAV
+6.BREAKPOINTS
+=============================
+*END TABLE CONTENT*
+=============================
+*/
+
+/*===========================================VARIABLES CSS==========================================*/
+
+/*3ERO Comienza a colocar variables en el root, ya que a partir de aqui se la ocupa en todos los estilos donde se la necesite*/
+:root{
+    --header-height: 60px;
+
+    /*Colores*/
+    /*Este color es para lo que esta alrededor de la foto*/
+    --bg-color: #1a805b;
+    /*Color para cierta parte del texto que esta debajo de la foto*/
+    --text-primary: #ee991a;
+
+    /*Tipografia*/
+    /*Referencia a la fuente que se importo en el HTML*/
+    --body-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    /*Configuracion del tamano d textos esto es util cuando estemos utilizando los breakpoints de los media query*/
+    --big-font-size: 32px;
+    --normal-font-size: 16px;
+    --small-font-size: 14px;
+    --smaller-font-size: 12px;
+
+    /*Grosores*/
+    --font-medium: 400;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /*Margenes*/
+    --mr-1: 8px;
+    --mr-2: 16px;
+    --mr-3: 20px;
+    --mr-4: 26px;
+    --mr-5: 32px;
+
+    /*z index es utilizado para la profundidad de las cosas, superponer algo, o ponerlo detras*/
+    --z-modal: 10;
+    /*El z fixed es para el navbar (Hablo de un louder, se va a utilizar?)*/
+    --z-fixed: 100;
+
+    /*Sombras uttilizadas en el header para sombrear el navbar*/
+    --box-shadow: 0px 10px 100px rgba(0, 0, 0, .1)
+}
+
+/**************ESTO AUN NO SE LO HA UTILIZADO NO PERTENECE DE LA 5TA HACIA ATRAS*******************/
+@media (min-width: 768px) {
+    :root{
+        --header-height: 90px; /*Se comienza a cambiar en el ultimo video*/
+        --big-font-size: 38px;
+        --normal-font-size: 18px;
+        --small-font-size: 16px;
+        --smaller-font-size: 14px;
+    }
+}
+/**************************************************************************************************/
+
+/*===========================================BASE==========================================*/
+
+/*4TO se paso a configurar el base ya que sirve para acomodar etiquetas sin estilos, o reiniciar algunas propiedades*/
+
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/*A todos mis elementos y mis pseudoelementos le aplico el modelo de caja alternativo*/
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    margin: 0;
+}
+
+/*Son para las listas de los enlaces, ojo las listas tienen un margin y un padding por defecto, estas no se eleminan en el body*/
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #111; /*Yo se lo puse*/
+}
+
+img{
+    max-width: 100%;
+    /*El auto hace que el alto sea proporcional a la altura*/
+    height: auto;
+}
+
+
+/*===========================================REUSABLE CLASSES==========================================*/
+
+/*5TO configurar las clases reutilizables para no volver a configurarlas*/
+.section{
+    /*El padding sirve para que se puedan separar las secciones*/
+    padding: 4rem 0;
+}
+
+.section__tittle{
+    /*Su proposito es colocarles info ya que estos datos de suelen repetir*/
+    /*No se le coloco color, ya que el modelo de este CV viene con titulos negros por defecto y el text align permite centrar las palabras*/
+    text-align: center;
+    margin: var(--mr-3) 0;
+}
+
+.grid--container{
+    max-width: 1024px;
+    display: grid;
+    /*Este margen evita que todo lo que se escriba no se pegue a los bordes*/
+    margin: 0 var(--mr-3);
+}
+
+/**************************AQUI ACABA LA 5TA PARTE*************************/
+/*Esto lo hizo en la parte 13va recien, creo clases reutilizables.*/
+.btn{
+    display: inline-block;
+    padding: 1.5rem 4 rem;
+    border: none;
+    border-radius: 5px;
+
+    /*No se diferencia que hace, pero en teoria cambia la forma del cursor en este caso es una manita.*/
+    /* outline: none; */
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+/*Le da color al boton*/
+.btn--primary{
+    background-color: #e0e0e0;
+}
+
+/*Efecto de subir al boton*/
+.btn:hover{
+    transform: translateY(-4px);
+}
+
+/*===========================================Header & Navbar==========================================*/
+/*10ma A partir de aqui empieza la 10ma parte a posicionar el navbar y final del primer video*/
+
+.header{
+    /*El fixed hace que no se mueva la barra al desplazarse hacia abajo con referencia a la ventana de window y junto al top y al left queden bien esquinados.*/
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    background-color: #fff;
+    /*El z-index evita que el navbar con el footer se sobrepongan*/
+    z-index: var(--z-fixed);
+    /*Aqui acaba la 10ma parte*/
+
+    /*Aqui empieza el ****segundo video**** Por lo general a todas las cajas que se vayan creando se les va ahaciendo un borde ya que me ayuda a ubicarme en espacio en pantalla en el segundo video se puso lo siguiente:*/
+    /*border: 1px solir red*/
+
+    /*Esto no hemos visto aun.*/
+    box-shadow: var(--box-shadow);
+}
+
+/*11VA Parte empieza a centrarse los elementos del navbar*/
+.navbar{
+    height: var(--header-height);
+
+    /*Ojo que se crearon 3 columnas la primera tiene el logo y el nombre, el segundo es la x y las palabras home hasta contact, y el tercero tiene el menu de hamburguesa.*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*En esta parte 11 se habla ya de dejar todos los elementos como mobile first. Se le puso 768 porque las tabletas empiezan en este rango */
+@media (max-width: 768px) {
+    .navbar__menu{
+
+        /*Y se coloca position fixed para que ocupe todo el ancho, ya que si se pone absolute se crean unos margenes ademas del top y left que al inicio son 0 para que queden esquinados*/
+        position: fixed;
+        top: -100%; /*Hace que el menu se desplace desde arriba*/
+        left: 0;
+        width: 100%;
+        background-color: #fff; /*Junto con el border Este me ayuda a ver el espacio que ocupa x, home,about...*/
+        /* border: 1px solid black; */
+
+        padding: 4.5rem 1rem 2rem;/*Para dejar espacio para ubicar la x*/
+        transition: .5s; /*Hace que se desplace lento el menu al bajar*/
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0px 1px 9px 2px #00000024;
+    }
+}
+
+/*Hace que se muestre o se oculte el menu porque a top en la media query le pusimos -100%..Java Scrip lo unico que hace es agregar y quitar la clase*/
+.show--menu{
+    top: 0;
+}
+
+/*Parte 11 del video*/
+.btn__close{
+    /*El postion absolute hace que se pierda el flujo y se mueve a la parte superior sobreponiendose a las letras. Esto hace qye la X se ponga 16 pixeles desde la derecha y en el tope*/
+    position: absolute;
+    top: var(--mr-2);
+    right: var(--mr-2);
+    
+    /*Esto hace que el cuadrado que esta alrededor de la x tenga un color gris, ancho y alto del mismo tamano y un borde radial*/
+    background-color: #f5f5f5;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%; /*Esto hace que lo cuadrado se haga circular*/
+    
+    /*Me centra el icono de la x dentri del circulo*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background .3s; /*El background anima la propiedad hover, hace que pase de un tono a otro gris un poco mas lento.*/
+}
+
+
+/*Se le puso un hover alrededor de la x*/
+.btn__close:hover{
+    background-color: #eee;
+}
+
+
+/*Asociado a la parte 11 este margin boton es para que no esten pegadas las palabras home, about etc*/
+.navbar__item{
+    margin-bottom: var(--mr-2);
+}
+/***********Aparentemente le deje esto porque tambien se podia poner en el .navbar__list row-gap de 1rem********************/
+
+
+/*Me ayuda a centrar el texto de inicio about etc esto esta ubicado en el ul...*/
+.navbar__list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*Solo para darle color y tamano al menu, a la x y al logo*/
+.btn__open,
+.btn__close,
+.navbar__logo i{
+    font-size: 2.2rem;
+    color: #111;
+}
+
+
+.navbar__link{
+    color: #111;
+    font-size: 1.2rem;
+    font-weight: var(--font-semi-bold);
+}
+
+/*Selecciona navbar__logo porque es el que tiene un icono y el texto*/
+.navbar__logo{
+    display: flex;
+    align-items: center;
+    column-gap: 0.25rem;
+    font-weight: var(--font-semi-bold);
+    color: #111;
+}
+
+.img__logo{
+    width: 40px;
+    height: 40px;
+}
+
+/*13VA PARTE - Despues de haber dado clases y crear las etiquetas del index procedemos a darle estilo al home*/
+/*********************************Home**************************************/
+
+/*Notese que este background que es todo lo que abarca los links de las redes, la foto la descripcion y el boton de CV*/
+.home{
+    background-color: #f5f5f5;
+}
+
+/*Hay que recordar que por la clase grid-container los elementos descritos arriba son una grilla y al ponerle row-gap tdo se espacia 2rem*/
+.home__container{
+    /*El relative es para que los elemntos que yo considere floten en la foto es decir los iconos de redes sociales*/
+    position: relative;
+    row-gap: 2rem;
+    padding: var(--header-height) 0 3rem;
+}
+
+/*Esto me sirve para centrar la imagen de perfil, por lo general se ingresa un min y un max y en el medio va un elemento gradual que va creciendo dependiendo del viewport. El max que va a alcanzar la imagen es de 445 px sin embargo en la resposnsividad puede cambiar de tamano. Respecto al min dice que puede ser 320px, pero si se llega a minorar mas, pues se escogera dependiendo del conteiner al 100%*/
+.home__image{
+    width: clamp(min(320px, 100%), 85vw, 445px);
+    height: auto; /*Altura proporcinal al ancho*/
+    margin: 0 auto; /*Esto hace que para dispositivos pequenos la imagen este siempre alc centro segun el ultimo video*/
+}
+
+.home__social{
+    /*Con el absolute se logra que las redes sociales queden dentro de la foto*/
+    position: absolute;
+    /*Aqui se posiciona las redes dentro de la foto*/
+    top: 10rem;
+    left: 1.2rem;
+    /*Si le dejaba solo con flex, todo se iba a poner en linea, pero con el flex direction ya se ponen verticales*/
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--mr-2);
+}
+
+/*Con esto le damos tamano a los iconos de los links*/
+.home__social-link{
+    color: #777;
+    font-size: 1.7rem;
+    transition: color .3s;
+}
+
+/*Este hover sirve pa*/
+.home__social-link:hover{
+    color: #111;
+}
+
+/*Esto ahce que el I am ... y el NIhao se centren*/
+.home__tittle,
+.home__description{
+    text-align: center;
+}
+
+.home__tittle{
+    margin: 0;
+    margin-bottom: var(--mr-2);
+    text-transform: uppercase;
+    /*letter-spacing: 3px hace qye se separen las letras*/
+}
+
+.home__buttons{
+    text-align: center;
+}
+
+/*14VA PARTE Construccion del about*/
+/******************************About**************************************/
+.about{
+    background-color: #fafafa;
+}
+
+.about__description{
+    text-align: center;
+}
+
+.about__skills{
+    margin: 2.5rem 0;
+}
+
+/*Esto me separa las tarjetas del html, css, js*/
+.about__cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(295px, 1fr)); /*Hace a las tarjetas mas pequenas*/
+    gap: 2rem;
+}
+
+.about__card{
+    background-color: #fff;
+    padding: 4rem 2rem 2rem ;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+
+/*AQUI FINALIZA EL TERCER VIDEO*/
+
+/*Aqui empieza el video 4 donde se quiere aplicar que dentro de la tarjeta existe una clase .bx, por eso ponemos .about_card .bx. Con esta configuracion hacemos que los iconos de HTML, CSS Y JS se hagan mas grandes*/
+.about__card .bx{
+    padding: 12px;
+    background-color: #f0f0f0;
+    font-size: 2rem;
+    border-radius: 50%;
+}
+
+/*Esta etiqueta se le da a alas tarjetitas con la finalidad de que se le puedad dar espacio a as tarjetitas*/
+.about__tags-container{
+    display: flex;
+    /*Hace que cuando no haya espacio se vayan hacia abajo las cosas y se cree un espacio entre skills*/
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/*Esto se realiza con la finalidad de separar las palabras entre ellas, y darle espacio arriba y bajo y se le puso inline block para ponerlos en linea.*/
+.about__tag{
+    display: inline-block;
+    padding: .75rem 1.5rem;
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-semi-bold);
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.about__card p{
+    text-align: justify;
+}
+
+/********************************************************AQUI FINALIZA LA 14 VA PARTE****************************************************/
+
+/******************************Projects**************************************/
+
+/****************************Aqui Empieza la 16va parte*******************************/
+
+.projects__container{
+    /*Le da separacion entre proyectos*/
+    gap: 2rem; 
+}
+
+/*A lado de project inner esta el grid container tambien que me ayuda a que al hacerse grande la pantalla una imagen quede de un lado y el texto al otro*/
+.projects__inner{
+    margin: 0;
+}
+
+.projects__image{
+    /*Si no se pusiera el display flex saliera un borde blanco abajo de la imagen.*/
+    display: flex;
+    box-shadow: 6px 11px 13px 0 #0000002e;
+}
+
+.projects__image img{
+    width: 100%;
+    height: auto;
+    object-fit: cover; /*Si la imagen esta muy grande la va a recortar y evita q se pixelee la img*/
+    border-radius: 5px;
+    box-shadow: 6px 11px 13px 0 #0000002e;
+}
+
+.projects__info{
+    padding: 1rem;
+}
+
+.projects__buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.projects__button{
+    padding: .75rem 1.5rem;
+    font-size: var(--smaller-font-size);
+}
+
+/*****************************************AQUI FINALIZA LA 17VA PARTE********************************/
+
+
+/***************************************************Contact***************************************************/
+.contact {
+    background-color: #f5f5f5;
+}
+
+.contact__container {
+    gap: 2rem;
+}
+
+.contact__info-data {
+    /*Para quitarle la cursiva a el telf, mail, y map*/
+    font-style: normal;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /*Espacio entre ellos*/
+
+    padding: 2rem 0;
+}
+
+.contact__form{/*Estilo tarjetita al formulario*/
+    width: 100%;
+    padding: 3rem 1.5rem 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.contact__form-group{
+    margin-bottom: var(--mr-4);
+}
+
+/*Esta parte es para que se separe ejemplo nombre del cuadrito donde se ingresa el nombre*/
+.contact__form-label{
+    display: block;
+    margin-bottom: var(--mr-1);
+}
+
+.contact__form-input{
+    /*Para que ocupen el 100% de su contenido*/
+    width: 100%;
+    padding: .75rem;
+    font-size: 1.2rem;
+    font-weight: var(--font-semi-bold);
+    border-radius: 5px;
+    /*outline: none;*/ /*Hace que no haya borde al dar click*/
+    background-color: #ebebeb;
+    border: 1px solid #f0f0f0;
+}
+
+/*AQUI ACABA EL 4TO VIDEO*/
+
+/* resize: none; para que no se ensanche el textarea */
+
+/******************************Footer**************************************/
+/*Empieza el nuevo video y ultimo*/
+.footer{
+    background-color: #111;
+    color: #efefef;
+    padding-bottom: 2rem;
+}
+
+.footer__conatiner{
+    gap: 2rem;
+}
+
+.footer__tittle{
+    font-size: 1.5rem;
+}
+
+.footer__social-list{
+    display: flex;
+    gap: var(--mr-2);
+    font-size: 1.5rem;
+    justify-content: center;
+}
+
+.footer__social-link{
+    color: #fff;
+}
+
+.linkedin:hover{
+    color: yellow;
+    transition: .5s;
+    /* background-color: #ebebeb; */
+}
+
+.instagram:hover{
+    color: blue;
+    transition: .5s;
+    /* background-color: #ebebeb; */
+}
+
+.github:hover{
+    color: red;
+    transition: .5s;
+    /* background-color: #ebebeb; */
+}
+
+.footer__copy{
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 1px solid #222;
+    padding-top: 2rem;
+    margin-bottom: 0;
+}
+
+/************************************Media Queries***************************************/
+/*Aqui empieza la 19va Parte*/
+
+@media (min-width: 768px){
+    /*Este parte es para que el navbar no quede pegada a las secciones*/
+    .section{
+        padding: 6rem 0 5rem;
+    }
+
+    /*Aqui se oculta los botones de cerrado y de hamburguesa*/
+    .btn__open,
+    .btn__close
+    {
+        display: none;
+    }
+
+    /*Coloca en direccion las palabrs about, portfolio etc*/
+    .navbar__list{
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    /*Le quita el margen a todas las palabras.*/
+    .navbar__item{
+        margin: 0;
+    }
+
+    /*==============================================*/
+
+    /*Posicionar los elementos del home*/
+    .home__container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto; /*Automaticamente se generan las filas*/
+    }
+
+    /*Aqui se trabaja la imagen de perfil*/
+    .home__image{
+        width: clamp(min(375px, 100%), 48vw, 500px); /*Aqui pone la imagen al borde del grid*/
+        grid-column: 2 / 3;
+        grid-row: 1 / 4;
+        transform:  translateY(3.3rem); /*Aca desplaza la imagen desde la parte de arriba al borde del contenedor*/
+    }
+
+    /*Se trabajan las redes sociales*/
+    .home__social{
+        position: relative;
+        top: 0;
+        left: 0;
+        flex-direction: row;
+        gap: 1.5rem;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /*Configurando el hey soy ...*/
+    .home__info{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*Tamano al nihao*/
+    .home__tittle{
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+
+    .home__description{
+        font-size: 1.3rem;
+    }
+
+    /*Aumentar el tamano de los iconos*/
+    .home__social-link{
+        font-size: 2rem;
+    }
+
+    /*Configurando el boton de sdescarga*/
+    .home__buttons{
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about__tags{
+        margin-top: 3rem;
+    }
+
+    /*Hace que se pongan las tarjetitas de las JS, html y las skill juntas*/
+    .about__skills{
+        grid-template-columns: 1fr .5fr;
+        gap: 2rem;
+    }
+
+    /*Espaciado del titulo project con las primera imagen*/
+    .projects__container{
+        padding: 3rem 0;
+        /*Separacion de tarjetitas de los projectos*/
+        gap: 5rem;
+    }
+
+    /*Como a lado de project inner esta la grid--container se puede hacer dos columnas una para imagenes y otra para definiciones*/
+    .projects__inner{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects__container 
+    .projects__project:nth-child(even) /*Selecciona a todos los hijos pares de las imagenes */
+    .projects__image{
+        order: 2;
+    }
+
+    .projects__container 
+    .projects__project:nth-child(even) 
+    .projects__info{
+        order: 1;
+        text-align: justify;
+        
+    }
+
+    .projects__container 
+    .projects__project:nth-child(odd) 
+    .projects__info{
+        order: 1;
+        text-align: justify;
+        
+    }
+
+    /*Poner a los bordes los botones*/
+    .projects__container 
+    .projects__project:nth-child(even) 
+    .projects__buttons{
+        justify-content: flex-end;
+    }
+
+    .contact__container{
+        grid-template-columns: .5fr 1fr;
+        justify-content: center;
+    }
+
+    .contact__info-description {
+        text-align: justify;
+        margin-right: 2rem;
+    }
+
+    .footer__social-list{
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer__container{
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        gap: 5rem;
+    }
+
+    .footer__tittle{
+        text-align: center;
+    }
+
+    .footer__description{
+        text-align: center;
+    }
+}
+
+/*Esto hace que al tener pantalla completa todo se centre y ocupe mucho espaci no el limitado*/
+@media (min-width: 1024px) {
+    .grid--container{
+        margin: 0 auto;
+    }
+
+    .about__skills{
+        margin-top: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Seccion de preguntas para el profe*/
+/*1.-Hablo de un louder, se va a utilizar?*/
+/*2.-Se puede hacer que no se vaya para arriba el menu de hamburgues al darle click?*/
+/*3.- En el img hay un span pero aun no ha dicho para que sirve*/
