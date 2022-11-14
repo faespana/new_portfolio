@@ -147,12 +147,15 @@ img{
 /*Le da color al boton*/
 .btn--primary{
     background-color: #e0e0e0;
+    /* display: flex;
+    column-gap: 2rem; */
 }
 
 /*Efecto de subir al boton*/
 .btn:hover{
     transform: translateY(-4px);
 }
+
 
 /*===========================================Header & Navbar==========================================*/
 /*10ma A partir de aqui empieza la 10ma parte a posicionar el navbar y final del primer video*/
@@ -343,6 +346,8 @@ img{
 
 .home__buttons{
     text-align: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 /*14VA PARTE Construccion del about*/
@@ -403,6 +408,26 @@ img{
 
 .about__card p{
     text-align: justify;
+}
+
+.bxl-html5:hover{
+    background-color: orangered;
+    transition: 0.7s;
+}
+
+.bxl-javascript:hover{
+    background-color: yellow;
+    transition: 0.7s;
+}
+
+.bxl-css3:hover{
+    background-color: #2795CB;
+    transition: 0.7s;
+}
+
+.bxl-git:hover{
+    background-color: #F15034;
+    transition: 0.7s;
 }
 
 /********************************************************AQUI FINALIZA LA 14 VA PARTE****************************************************/
@@ -646,7 +671,7 @@ img{
         grid-column: 1 / 2;
         grid-row: 3 / 4;
         display: flex;
-        justify-content: center;
+        justify-content:space-around;
         align-items: center;
     }
 
@@ -728,6 +753,10 @@ img{
 
     .footer__description{
         text-align: center;
+    }
+
+    .footer{
+        padding-bottom: 2rem;
     }
 }
 

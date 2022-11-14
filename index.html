@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
@@ -15,8 +16,9 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="logo" href="/assets/img/Diseño_sin_título-removebg-preview.png" type="image/png">
-    <title>Portfolio</title>
+    <link rel="shortcut icon" href="/assets/img/gasolina.png" type="image/png">
+
+    <title>Felosct7's portfolio</title>
 
 </head>
 
@@ -26,7 +28,7 @@
         <!--9NA Parte se empieza con el nombramiento de las clases desde el header, el grid container es utilizado para que el navbar tenga max 1024px y se maneje como un grid acaba con el nombriamiento de las clases de los botones y las listas.-->
         <nav class="navbar grid--container">
             <!--Este es el LOGO (sacado de boxicoms) que queremos poner junto a nuestro nombre, ojo el nombre de su clase se llama navbar__logo debido a que esta dentro del navbar. -->
-            <a class="navbar__logo" href="#"><img class="img__logo" src="assets/img/Diseño_sin_título-removebg-preview.png" alt="logo">felosct7</a>
+            <a class="navbar__logo" href="#home"><img class="img__logo" src="assets/img/Diseño_sin_título-removebg-preview.png" alt="logo">felosct7</a>
             
             <div class="navbar__menu">
                 <!--Este es el BOTON DE CERRADO (sacado de boxicoms)-->
@@ -59,22 +61,23 @@
                 </div>
 
                 <ul class="home__social">
-                    <li class="home__social-item"><a class="home__social-link" target="_blank" href="https://www.linkedin.com/in/felipe-espa%C3%B1a-ord%C3%B3%C3%B1ez-38609197/"><i class='bx bxl-linkedin'></i></a></li>
-                    <li class="home__social-item"><a class="home__social-link" target="_blank" href="https://www.instagram.com/faespana/"><i class='bx bxl-instagram'></i></a></li>
-                    <li class="home__social-item"><a class="home__social-link" target="_blank" href="https://github.com/faespana"><i class='bx bxl-github'></i></a></li>
+                    <li class="home__social-item"><a class="home__social-link linkedin" target="_blank" href="https://www.linkedin.com/in/felipe-espa%C3%B1a-ord%C3%B3%C3%B1ez-38609197/"><i class='bx bxl-linkedin'></i></a></li>
+                    <li class="home__social-item"><a class="home__social-link instagram" target="_blank" href="https://www.instagram.com/faespana/"><i class='bx bxl-instagram'></i></a></li>
+                    <li class="home__social-item"><a class="home__social-link github" target="_blank" href="https://github.com/faespana"><i class='bx bxl-github'></i></a></li>
                 </ul>
                 <!--El home info no tiene tanto blah blah porque en el about nos vamos a deshogar con eso.-->
                 <div class="home__info">
 
                     <h1 class="home__tittle">👋🏾 你好, soy Felipe España</h1>
                     <p class="home__description">
-                        I'm a Front-end Developer, I like to learn about new technologies & travel around the world. Proudly ecuadorian 💛💙❤️
+                        I'm a Front-end Developer & Petroleum Engineer, I like to learn about new technologies and travel around the world. Proudly ecuadorian 💛💙❤️
                     </p>
 
                 </div>
                 <!--Aqui nos recomendaron que podemos poner otro boton que mande a descargar certificados entre otros-->
                 <div class="home__buttons">
-                    <button class="btn btn--primary" type="button">Download CV</button>
+                    <a href="/assets/documents/Felipe_Espana_CV_Petroleum_Engineer.pdf" download="Petroleum CV"><button class="btn btn--primary" type="button">Download Petroleum CV</button></a>
+                    <a href="/assets/documents/Felipe_Espana_CV_Front-end_Developer.pdf" download="Front-end CV"><button class="btn btn--primary" type="button">Download Front-end CV</button></a>
                 </div>
 
             </div>
@@ -106,13 +109,19 @@
                         <div class="about__card">
                             <i class="bx bxl-html5"></i>
                             <h3 class="about__card-tittle">HTML5</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, dolore! Iure harum laborum quis laboriosam, commodi quia facere ad nulla et iusto pariatur veritatis molestiae dolorem, repellendus nesciunt dicta nisi?</p>
+                            <p>HTML5 is a standard that serves as a reference for software that connects with the development of web pages in its different versions, defines a basic structure and code (called HTML) for defining the content of a web page, such as text, images, videos , games, among others.</p>
                         </div>
 
                         <div class="about__card">
                             <i class="bx bxl-css3"></i>
                             <h3 class="about__card-tittle">CSS</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt impedit, tempore sunt error voluptates suscipit dolores saepe, quos amet optio similique ab in aliquam doloribus consequuntur modi, minima at magnam.</p>
+                            <p>CSS is a graphic design language that allows you to define and create the presentation of a structured document written in a markup language. It is widely used to establish the visual design of web documents and user interfaces written in HTML.</p>
+                        </div>
+
+                        <div class="about__card">
+                            <i class="bx bxl-git"></i>
+                            <h3 class="about__card-tittle">CSS</h3>
+                            <p>Git is a DevOps tool used for source code management. It is a free and open-source version control system used to handle small to very large projects efficiently. Git is used to tracking changes in the source code, enabling multiple developers to work together on non-linear development.</p>
                         </div>
                     
                     </div>
@@ -159,13 +168,14 @@
                             <h3 class="projects__name">Project 1</h3>
 
                             <p class="projects__description">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore placeat, repellat provident, laboriosam quisquam alias explicabo voluptatum sed in accusamus cum impedit consequuntur? Deleniti voluptatum nisi quasi. Voluptas, est harum.
+                                Construction of landing page through the use of programming languages 👨🏽‍💻 such as html5 🧡 and css3 💙. In addition, with javascript 💛, animations were produced in the body and the dark 🌚 & light 🌞 mode button was produced.
                             </p>
 
                             <div class="projects__buttons">
                                 <!--Es importante colocarle el tipo ya que el navegador se puede quejar-->
                                 <button class="btn projects__button" type="button"><a href="https://aesthetic-puffpuff-cb6031.netlify.app/" target = "_blank">Show Demo</a></button>
-                                <button class="btn projects__button" type="button">Show Code</button>
+                                <button class="btn projects__button" type="button"><a href="https://github.com/faespana/first_portfolio"  target = "_blank">Show Code</a></button>
+                                
 
                             </div>
 
@@ -181,7 +191,7 @@
 
                         <div class="projects__image">
 
-                            <img src="/assets/img/project2.png" alt="project 2">
+                            <img src="/assets/img/PokeRap.gif" alt="project 2">
 
                         </div>
 
@@ -190,13 +200,16 @@
                             <h3 class="projects__name">Project 2</h3>
 
                             <p class="projects__description">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore placeat, repellat provident, laboriosam quisquam alias explicabo voluptatum sed in accusamus cum impedit consequuntur? Deleniti voluptatum nisi quasi. Voluptas, est harum.
+                                Catching Pokemons 🐱🦒🐭🐮🦉🦇🦋🦅 to the beat of PokeRap 🎶 & consuming their API 👨🏽‍💻 ... Gotta Catch ‘Em All! 🎊🤾🏽‍♂️
+                                <br><br>
+                                🤩🤩🤩 Beautiful childhood memories 🤩🤩🤩
                             </p>
 
                             <div class="projects__buttons">
                                 <!--Es importante colocarle el tipo ya que el navegador se puede quejar-->
-                                <button class="btn projects__button" type="button">Show Demo</button>
-                                <button class="btn projects__button" type="button">Show Code</button>
+                                <button class="btn projects__button" type="button"><a href="https://spontaneous-stroopwafel-625497.netlify.app/" target = "_blank">Show Demo</a></button>
+
+                                <button class="btn projects__button" type="button"><a href="https://github.com/faespana/pokemon"  target = "_blank">Show Code</a></button>
 
                             </div>
 
@@ -212,7 +225,7 @@
 
                         <div class="projects__image">
 
-                            <img src="/assets/img/project3.jpg" alt="project 3">
+                            <img src="/assets/img/e-commerce.gif" alt="project 3">
 
                         </div>
 
@@ -221,44 +234,16 @@
                             <h3 class="projects__name">Project 3</h3>
 
                             <p class="projects__description">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore placeat, repellat provident, laboriosam quisquam alias explicabo voluptatum sed in accusamus cum impedit consequuntur? Deleniti voluptatum nisi quasi. Voluptas, est harum.
+                                Would you like to start your business 📦 and increase your sales 🤑 around the world 💙💚 with your own website 📔? <br><br>
+                                This e-commerce was built with native JavaScript 💛, HTML5 🧡 and CSS3 💙 technologies. It has a fully functional shopping cart 🛒, in which you can add the objects you wish to acquire and the purchase button will generate your request. In addition, it has the dark mode 🌚 and thus not affect your vision 🤩, protect your eyes 👀!
                             </p>
 
                             <div class="projects__buttons">
                                 <!--Es importante colocarle el tipo ya que el navegador se puede quejar-->
-                                <button class="btn projects__button" type="button">Show Demo</button>
-                                <button class="btn projects__button" type="button">Show Code</button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="projects__project">
-                    <!--Este es como si fuera el interior del proyecto-->
-                    <div class="projects__inner grid--container">
-
-                        <div class="projects__image">
-
-                            <img src="/assets/img/project4.png" alt="project 4">
-
-                        </div>
-
-                        <div class="projects__info">
-
-                            <h3 class="projects__name">Project 4</h3>
-
-                            <p class="projects__description">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore placeat, repellat provident, laboriosam quisquam alias explicabo voluptatum sed in accusamus cum impedit consequuntur? Deleniti voluptatum nisi quasi. Voluptas, est harum.
-                            </p>
-
-                            <div class="projects__buttons">
-                                <!--Es importante colocarle el tipo ya que el navegador se puede quejar-->
-                                <button class="btn projects__button" type="button">Show Demo</button>
-                                <button class="btn projects__button" type="button">Show Code</button>
+                                <button class="btn projects__button" type="button"><a href="https://strong-cucurucho-4dad85.netlify.app/" target = "_blank">Show Demo</a></button>
+                                
+                                <button class="btn projects__button" type="button"><a href="https://github.com/faespana/first__ecommerce"  target = "_blank">Show Code</a></button>
+                                
 
                             </div>
 
@@ -311,16 +296,16 @@
 
                     <h3 class="contact__form-title">Send a Message</h3>
 
-                    <form id="form" class="contact__form-container">
+                    <form id="form" class="contact__form-container" data-netlify="true">
 
                         <div class="contact__form-group">
                             <label for="name" class="contact__form-label">Name:</label>
-                            <input type="text" id="name" class="contact__form-input">
+                            <input type="text" id="name" class="contact__form-input" required>
                         </div>
 
                         <div class="contact__form-group">
                             <label for="email" class="contact__form-label">E-mail:</label>
-                            <input type="email" id="email" class="contact__form-input">
+                            <input type="email" id="email" class="contact__form-input" required>
                         </div>
 
                         <div class="contact__form-group">
@@ -377,10 +362,9 @@
             </div>
 
         </div>
-
+        
         <p class="footer__copy">
-            &copy;2022, All rights reserved
-            
+            &copy;2022, All rights reserved   
         </p>
 
     </footer>
