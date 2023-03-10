@@ -1,388 +1,571 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--2DO Exportamos la tipografia, la colocamos encima del boxicon ya que el link de boxicon tiene demasiado informacion que debe procesar-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!--1ERO Se exporto los iconos de la pagina de boxicons, en la parte de USAGE -> Usage as a Font y luego se copia el link-->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="shortcut icon" href="/assets/img/gasolina.png" type="image/png">
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="/assets/img/gasolina.png"
+      type="image/png"
+    />
 
     <title>Felosct7's portfolio</title>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <!--6TA Parte aqui comienza la construccion del header-->
     <header class="header">
-        <!--9NA Parte se empieza con el nombramiento de las clases desde el header, el grid container es utilizado para que el navbar tenga max 1024px y se maneje como un grid acaba con el nombriamiento de las clases de los botones y las listas.-->
-        <nav class="navbar grid--container">
-            <!--Este es el LOGO (sacado de boxicoms) que queremos poner junto a nuestro nombre, ojo el nombre de su clase se llama navbar__logo debido a que esta dentro del navbar. -->
-            <a class="navbar__logo" href="#home"><img class="img__logo" src="assets/img/Diseño_sin_título-removebg-preview.png" alt="logo">felosct7</a>
-            
-            <div class="navbar__menu">
-                <!--Este es el BOTON DE CERRADO (sacado de boxicoms)-->
-                <i class='bx bx-x navbar__icon btn__close'></i> <!--En el ultimo video esto estaba envuelto en un enlace 'a' (se recomienda un button) pero eso hacia que al abrir el menu en cualquier parte de mi pagina, se subia inmediatamente, al sacr del enlace y dejar solo la i, se evita eso.-->
+      <!--9NA Parte se empieza con el nombramiento de las clases desde el header, el grid container es utilizado para que el navbar tenga max 1024px y se maneje como un grid acaba con el nombriamiento de las clases de los botones y las listas.-->
+      <nav class="navbar grid--container">
+        <!--Este es el LOGO (sacado de boxicoms) que queremos poner junto a nuestro nombre, ojo el nombre de su clase se llama navbar__logo debido a que esta dentro del navbar. -->
+        <a class="navbar__logo" href="#home"
+          ><img
+            class="img__logo"
+            src="assets/img/Diseño_sin_título-removebg-preview.png"
+            alt="logo"
+          />felosct7</a
+        >
 
-                <ul class="navbar__list">
-                    <li class="navbar__item"><a class="navbar__link" href="#home">Home</a></li>
-                    <li class="navbar__item"><a class="navbar__link" href="#about">About me</a></li>
-                    <li class="navbar__item"><a class="navbar__link" href="#projects">Portfolio</a></li>
-                    <li class="navbar__item"><a class="navbar__link" href="#contact">Contact me</a></li>
-                </ul>
-            </div>
-             <!--Este es el BOTON DE MENU de Hamburguesa (sacado de boxicoms)-->
-            <i class='bx bx-menu navbar__icon btn__open'></i>
+        <div class="navbar__menu">
+          <!--Este es el BOTON DE CERRADO (sacado de boxicoms)-->
+          <i class="bx bx-x navbar__icon btn__close"></i>
+          <!--En el ultimo video esto estaba envuelto en un enlace 'a' (se recomienda un button) pero eso hacia que al abrir el menu en cualquier parte de mi pagina, se subia inmediatamente, al sacr del enlace y dejar solo la i, se evita eso.-->
 
-        </nav>
-
+          <ul class="navbar__list">
+            <li class="navbar__item">
+              <a class="navbar__link" href="#home">Home</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="#about">About me</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="#projects">Portfolio</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="#contact">Contact me</a>
+            </li>
+          </ul>
+        </div>
+        <!--Este es el BOTON DE MENU de Hamburguesa (sacado de boxicoms)-->
+        <i class="bx bx-menu navbar__icon btn__open"></i>
+      </nav>
     </header>
 
     <!--7MA Parte aqui comienza la construccion de los sections y los footers...todos tienen un h2 de titulo y un div que envuelve el contenido-->
     <main>
-        <!--8VA Parte se comienza a nombrar las clases-->
-        <section id="home" class="home">
-            <!--Aqui empieza la 12VA Parte si notan esta section no tiene titulo porque es como una presentación-->
-            <div class="home__container grid--container">
+      <!--8VA Parte se comienza a nombrar las clases-->
+      <section id="home" class="home">
+        <!--Aqui empieza la 12VA Parte si notan esta section no tiene titulo porque es como una presentación-->
+        <div class="home__container grid--container">
+          <div class="home__image">
+            <span></span>
+            <img
+              src="/assets/img/toro-removebg-preview.png"
+              alt="profile photo"
+            />
+          </div>
 
-                <div class="home__image">
-                    <span></span>
-                    <img src="/assets/img/toro-removebg-preview.png" alt="profile photo">
-                </div>
+          <ul class="home__social">
+            <li class="home__social-item">
+              <a
+                class="home__social-link linkedin"
+                target="_blank"
+                href="https://www.linkedin.com/in/felipe-espa%C3%B1a-ord%C3%B3%C3%B1ez-38609197/"
+                ><i class="bx bxl-linkedin"></i
+              ></a>
+            </li>
+            <li class="home__social-item">
+              <a
+                class="home__social-link instagram"
+                target="_blank"
+                href="https://www.instagram.com/faespana/"
+                ><i class="bx bxl-instagram"></i
+              ></a>
+            </li>
+            <li class="home__social-item">
+              <a
+                class="home__social-link github"
+                target="_blank"
+                href="https://github.com/faespana"
+                ><i class="bx bxl-github"></i
+              ></a>
+            </li>
+          </ul>
+          <!--El home info no tiene tanto blah blah porque en el about nos vamos a deshogar con eso.-->
+          <div class="home__info">
+            <h1 class="home__tittle">👋🏾 你好, soy Felipe España</h1>
+            <p class="home__description">
+              I'm a Front-end Developer & Petroleum Engineer, I like to learn
+              about new technologies and travel around the world. Proudly
+              Ecuadorian 💛💙❤️
+            </p>
+          </div>
+          <!--Aqui nos recomendaron que podemos poner otro boton que mande a descargar certificados entre otros-->
+          <div class="home__buttons">
+            <a
+              href="/assets/documents/Felipe_Espana_CV_Petroleum_Engineer.pdf"
+              download="Petroleum CV"
+              ><button class="btn btn--primary" type="button">
+                Download Petroleum CV
+              </button></a
+            >
+            <a
+              href="/assets/documents/Felipe_Espana_CV_Front-end_Developer.pdf"
+              download="Front-end CV"
+              ><button class="btn btn--primary" type="button">
+                Download Front-end CV
+              </button></a
+            >
+          </div>
+        </div>
+      </section>
 
-                <ul class="home__social">
-                    <li class="home__social-item"><a class="home__social-link linkedin" target="_blank" href="https://www.linkedin.com/in/felipe-espa%C3%B1a-ord%C3%B3%C3%B1ez-38609197/"><i class='bx bxl-linkedin'></i></a></li>
-                    <li class="home__social-item"><a class="home__social-link instagram" target="_blank" href="https://www.instagram.com/faespana/"><i class='bx bxl-instagram'></i></a></li>
-                    <li class="home__social-item"><a class="home__social-link github" target="_blank" href="https://github.com/faespana"><i class='bx bxl-github'></i></a></li>
-                </ul>
-                <!--El home info no tiene tanto blah blah porque en el about nos vamos a deshogar con eso.-->
-                <div class="home__info">
+      <section id="about" class="about section">
+        <h2 class="section__tittle">About me</h2>
 
-                    <h1 class="home__tittle">👋🏾 你好, soy Felipe España</h1>
-                    <p class="home__description">
-                        I'm a Front-end Developer & Petroleum Engineer, I like to learn about new technologies and travel around the world. Proudly ecuadorian 💛💙❤️
-                    </p>
+        <div class="about__container grid--container">
+          <p class="about__description">
+            I am a person who believes that everything that is done with effort
+            💪🏾 and continuous learning 🤓 generates <i>great rewards.</i>
+            <br /><br />
+            Self-taught researcher 🤖, I like to learn new programming languages
+            and create web 📔 and mobile applications 📲. <br /><br />
+            I am from a large green province called Esmeraldas 💚🤍 located in
+            the north of Ecuador, a lover 🤩 of its nature and beautiful beaches
+            ⛱️. <strong>Enjoy life!!</strong>.
+          </p>
 
-                </div>
-                <!--Aqui nos recomendaron que podemos poner otro boton que mande a descargar certificados entre otros-->
-                <div class="home__buttons">
-                    <a href="/assets/documents/Felipe_Espana_CV_Petroleum_Engineer.pdf" download="Petroleum CV"><button class="btn btn--primary" type="button">Download Petroleum CV</button></a>
-                    <a href="/assets/documents/Felipe_Espana_CV_Front-end_Developer.pdf" download="Front-end CV"><button class="btn btn--primary" type="button">Download Front-end CV</button></a>
-                </div>
+          <div class="about__skills grid--container">
+            <div class="about__cards">
+              <div class="about__card">
+                <i class="bx bxl-javascript"></i>
+                <h3 class="about__card-tittle">JavaScript</h3>
+                <p>
+                  During the learning 🏫 of Java Script 💛 we carry out logical
+                  reasoning 🧠 exercises and use variables, logical and
+                  comparison operators to obtain our results ⁉️. We reduce our
+                  lines of code with functions 🤖 and also use string and array
+                  methods along with conditionals and loops 🤓.
+                </p>
+              </div>
 
+              <div class="about__card">
+                <i class="bx bxl-html5"></i>
+                <h3 class="about__card-tittle">HTML5</h3>
+                <p>
+                  HTML5 🧡 is a standard that serves as a reference for software
+                  👨🏽‍💻 that connects with the development of web pages 📔 in its
+                  different versions, defines a basic structure and code (called
+                  HTML) for defining the content of a web page, such as text 💬,
+                  images 📸, videos 📽️, games 🎮, among others.
+                </p>
+              </div>
+
+              <div class="about__card">
+                <i class="bx bxl-css3"></i>
+                <h3 class="about__card-tittle">CSS</h3>
+                <p>
+                  CSS 💙 is a graphic design language that allows you to define
+                  and create the presentation of a structured document written
+                  👨🏽‍💻 in a markup language. It is widely used to establish the
+                  visual design of web documents 📔 and user interfaces written
+                  in HTML.
+                </p>
+              </div>
+
+              <div class="about__card">
+                <i class="bx bxl-react"></i>
+                <h3 class="about__card-tittle">ReactJS</h3>
+                <p>
+                  As a reactJS 💙 programmer I have managed to create
+                  applications that have a great interaction with the user 👥, I
+                  have consumed some APIs 👨🏽‍💻 using technologies such as axios,
+                  react-hook-forms, redux, react-router-dom and protected routes
+                  ❌. Always counting on clean code standards and useful updates
+                  🧼🤍.
+                </p>
+              </div>
+
+              <div class="about__card">
+                <i class="bx bxl-nodejs"></i>
+                <h3 class="about__card-tittle">NodeJS</h3>
+                <p>
+                  With Nodejs 💚 I have made Rest APIs using a relational
+                  database, user authentication 📅, security 🔐 against XSS and
+                  CSRF attacks, you will be able to validate the data received
+                  by the server and you will be able to build custom middleware
+                  🌉 with Express.
+                </p>
+              </div>
+
+              <div class="about__card">
+                <i class="bx bxl-git"></i>
+                <h3 class="about__card-tittle">Git</h3>
+                <p>
+                  Git 🧡😻 is a DevOps tool used for source code management. It
+                  is a free and open-source version control system 🛣️ used to
+                  handle small to very large projects efficiently 👨🏽‍💻💪🏽. Git is
+                  used to tracking changes in the source code 📔, enabling
+                  multiple developers to work together on non-linear development
+                  🧑🏽‍💻👨🏽‍💻👩🏽‍💻.
+                </p>
+              </div>
             </div>
 
-        </section>
+            <div class="about__tags">
+              <h3 class="about__tags-title">Skills</h3>
 
-        <section id="about" class="about section">
+              <div class="about__tags-container">
+                <span class="about__tag">English</span>
+                <span class="about__tag">Chinese</span>
+                <span class="about__tag">Team-working</span>
+                <span class="about__tag">Creative</span>
+                <span class="about__tag">Punctual</span>
+                <span class="about__tag">Responsible</span>
+                <span class="about__tag">Proactive</span>
+                <span class="about__tag">Self-taught</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Aqui empieza la 15va parte-->
+      <section id="projects" class="projects section">
+        <h2 class="section__tittle">Portfolio</h2>
 
-            <h2 class="section__tittle">About me</h2>
+        <div class="projects__container grid--container">
+          <div class="projects__project">
+            <!--Este es como si fuera el interior del proyecto-->
+            <div class="projects__inner grid--container">
+              <div class="projects__image">
+                <img
+                  src="assets/img/Rick & Morty APP_by_Felipao.gif"
+                  alt="project 1"
+                />
+              </div>
 
-            <div class="about__container grid--container">
+              <div class="projects__info">
+                <h3 class="projects__name">Project 1</h3>
 
-                <p class="about__description">
-                    I am a person who believes that everything that is done with effort 💪🏾 and continuous learning 🤓 generates <i>great rewards.</i> <br><br>
-                    Self-taught researcher 🤖, I like to learn new programming languages and create web 📔 and mobile applications 📲. <br><br>
-                    I am from a large green province called Esmeraldas 💚🤍 located in the north of Ecuador, a lover 🤩 of its nature and beautiful beaches ⛱️. <strong>Enjoy life!!</strong>.
+                <p class="projects__description">
+                  I leave you a link 👇🏽 with a project (The animated series:
+                  Rick 👴🏽 & Morty 👨🏽‍🦱) that I just finished, so you can take a
+                  look and give me your opinion. Technical aspects 👷🏽: You must
+                  enter a number from 1 to 126 for a universe to appear 👀, the
+                  application was made with reactJS 💙and CSS3💙. Dependencies
+                  like axios & react-hook-form were used.
                 </p>
 
-                <div class="about__skills grid--container">
-
-                    <div class="about__cards">
-
-                        <div class="about__card">
-                            <i class="bx bxl-javascript"></i>
-                            <h3 class="about__card-tittle">JavaScript</h3>
-                            <p>During the learning of Java Script we carry out logical reasoning exercises and use variables, logical and comparison operators to obtain our results. We reduce our lines of code with functions and also use string and array methods along with conditionals and loops.</p>
-                        </div>
-
-                        <div class="about__card">
-                            <i class="bx bxl-html5"></i>
-                            <h3 class="about__card-tittle">HTML5</h3>
-                            <p>HTML5 is a standard that serves as a reference for software that connects with the development of web pages in its different versions, defines a basic structure and code (called HTML) for defining the content of a web page, such as text, images, videos , games, among others.</p>
-                        </div>
-
-                        <div class="about__card">
-                            <i class="bx bxl-css3"></i>
-                            <h3 class="about__card-tittle">CSS</h3>
-                            <p>CSS is a graphic design language that allows you to define and create the presentation of a structured document written in a markup language. It is widely used to establish the visual design of web documents and user interfaces written in HTML.</p>
-                        </div>
-
-                        <div class="about__card">
-                            <i class="bx bxl-git"></i>
-                            <h3 class="about__card-tittle">Git</h3>
-                            <p>Git is a DevOps tool used for source code management. It is a free and open-source version control system used to handle small to very large projects efficiently. Git is used to tracking changes in the source code, enabling multiple developers to work together on non-linear development.</p>
-                        </div>
-                    
-                    </div>
-                    
-                    <div class="about__tags">
-
-                        <h3 class="about__tags-title">Skills</h3>
-
-                    <div class="about__tags-container">
-                        <span class="about__tag">Team-working</span>
-                        <span class="about__tag">Creative</span>
-                        <span class="about__tag">Punctual</span>
-                        <span class="about__tag">Responsible</span>
-                        <span class="about__tag">Proactive</span>
-                        <span class="about__tag">Self-taught</span>
-                    </div>
-
-                    </div>
-
+                <div class="projects__buttons">
+                  <!--Es importante colocarle el tipo ya que el navegador se puede quejar-->
+                  <button class="btn projects__button" type="button">
+                    <a
+                      href="https://bright-malasada-88b390.netlify.app/"
+                      target="_blank"
+                      >Show Demo</a
+                    >
+                  </button>
+                  <button class="btn projects__button" type="button">
+                    <a
+                      href="https://github.com/faespana/rick-morty"
+                      target="_blank"
+                      >Show Code</a
+                    >
+                  </button>
                 </div>
-
+              </div>
             </div>
+          </div>
 
-        </section>
-        <!--Aqui empieza la 15va parte-->
-        <section id="projects" class="projects section">
+          <div class="projects__project">
+            <!--Este es como si fuera el interior del proyecto-->
+            <div class="projects__inner grid--container">
+              <div class="projects__image">
+                <img src="/assets/img/PokeRap.gif" alt="project 2" />
+              </div>
 
-            <h2 class="section__tittle">Portfolio</h2>
+              <div class="projects__info">
+                <h3 class="projects__name">Project 2</h3>
 
-            <div class= "projects__container grid--container">
+                <p class="projects__description">
+                  Catching Pokemons 🐱🦒🐭🐮🦉🦇🦋🦅 to the beat of PokeRap 🎶 &
+                  consuming their API 👨🏽‍💻 ... Gotta Catch ‘Em All! 🎊🤾🏽‍♂️
+                  <br /><br />
+                  🤩🤩🤩 Beautiful childhood memories 🤩🤩🤩
+                </p>
 
-                <div class="projects__project">
-                    <!--Este es como si fuera el interior del proyecto-->
-                    <div class="projects__inner grid--container">
+                <div class="projects__buttons">
+                  <!--Es importante colocarle el tipo ya que el navegador se puede quejar-->
+                  <button class="btn projects__button" type="button">
+                    <a
+                      href="https://celadon-moonbeam-e2bef3.netlify.app"
+                      target="_blank"
+                      >Show Demo</a
+                    >
+                  </button>
 
-                        <div class="projects__image">
-
-                            <img src="/assets/img/video1706814361.gif" alt="project 1">
-
-                        </div>
-
-                        <div class="projects__info">
-
-                            <h3 class="projects__name">Project 1</h3>
-
-                            <p class="projects__description">
-                                Construction of landing page through the use of programming languages 👨🏽‍💻 such as html5 🧡 and css3 💙. In addition, with javascript 💛, animations were produced in the body and the dark 🌚 & light 🌞 mode button was produced.
-                            </p>
-
-                            <div class="projects__buttons">
-                                <!--Es importante colocarle el tipo ya que el navegador se puede quejar-->
-                                <button class="btn projects__button" type="button"><a href="https://aesthetic-puffpuff-cb6031.netlify.app/" target = "_blank">Show Demo</a></button>
-                                <button class="btn projects__button" type="button"><a href="https://github.com/faespana/first_portfolio"  target = "_blank">Show Code</a></button>
-                                
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
+                  <button class="btn projects__button" type="button">
+                    <a
+                      href="https://github.com/faespana/new_poke_app"
+                      target="_blank"
+                      >Show Code</a
+                    >
+                  </button>
                 </div>
-
-                <div class="projects__project">
-                    <!--Este es como si fuera el interior del proyecto-->
-                    <div class="projects__inner grid--container">
-
-                        <div class="projects__image">
-
-                            <img src="/assets/img/PokeRap.gif" alt="project 2">
-
-                        </div>
-
-                        <div class="projects__info">
-
-                            <h3 class="projects__name">Project 2</h3>
-
-                            <p class="projects__description">
-                                Catching Pokemons 🐱🦒🐭🐮🦉🦇🦋🦅 to the beat of PokeRap 🎶 & consuming their API 👨🏽‍💻 ... Gotta Catch ‘Em All! 🎊🤾🏽‍♂️
-                                <br><br>
-                                🤩🤩🤩 Beautiful childhood memories 🤩🤩🤩
-                            </p>
-
-                            <div class="projects__buttons">
-                                <!--Es importante colocarle el tipo ya que el navegador se puede quejar-->
-                                <button class="btn projects__button" type="button"><a href="https://spontaneous-stroopwafel-625497.netlify.app/" target = "_blank">Show Demo</a></button>
-
-                                <button class="btn projects__button" type="button"><a href="https://github.com/faespana/pokemon"  target = "_blank">Show Code</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="projects__project">
-                    <!--Este es como si fuera el interior del proyecto-->
-                    <div class="projects__inner grid--container">
-
-                        <div class="projects__image">
-
-                            <img src="/assets/img/e-commerce.gif" alt="project 3">
-
-                        </div>
-
-                        <div class="projects__info">
-
-                            <h3 class="projects__name">Project 3</h3>
-
-                            <p class="projects__description">
-                                Would you like to start your business 📦 and increase your sales 🤑 around the world 💙💚 with your own website 📔? <br><br>
-                                This e-commerce was built with native JavaScript 💛, HTML5 🧡 and CSS3 💙 technologies. It has a fully functional shopping cart 🛒, in which you can add the objects you wish to acquire and the purchase button will generate your request. In addition, it has the dark mode 🌚 and thus not affect your vision 🤩, protect your eyes 👀!
-                            </p>
-
-                            <div class="projects__buttons">
-                                <!--Es importante colocarle el tipo ya que el navegador se puede quejar-->
-                                <button class="btn projects__button" type="button"><a href="https://strong-cucurucho-4dad85.netlify.app/" target = "_blank">Show Demo</a></button>
-                                
-                                <button class="btn projects__button" type="button"><a href="https://github.com/faespana/first__ecommerce"  target = "_blank">Show Code</a></button>
-                                
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+              </div>
             </div>
+          </div>
 
-        </section>
+          <div class="projects__project">
+            <!--Este es como si fuera el interior del proyecto-->
+            <div class="projects__inner grid--container">
+              <div class="projects__image">
+                <img src="/assets/img/e-commerce.gif" alt="project 3" />
+              </div>
 
-        <section id="contact" class="contact section">
+              <div class="projects__info">
+                <h3 class="projects__name">Project 3</h3>
 
-            <h2 class="section__tittle">Contact</h2>
+                <p class="projects__description">
+                  Would you like to start your business 📦 and increase your
+                  sales 🤑 around the world 💙💚 with your own website 📔?
+                  <br /><br />
+                  This e-commerce was built with native JavaScript 💛, HTML5 🧡
+                  and CSS3 💙 technologies. It has a fully functional shopping
+                  cart 🛒, in which you can add the objects you wish to acquire
+                  and the purchase button will generate your request. In
+                  addition, it has the dark mode 🌚 and thus not affect your
+                  vision 🤩, protect your eyes 👀!
+                </p>
 
-            <div class="contact__container grid--container">
+                <div class="projects__buttons">
+                  <!--Es importante colocarle el tipo ya que el navegador se puede quejar-->
+                  <button class="btn projects__button" type="button">
+                    <a
+                      href="https://strong-cucurucho-4dad85.netlify.app/"
+                      target="_blank"
+                      >Show Demo</a
+                    >
+                  </button>
 
-                <div class="contact__info">
-
-                    <h3 class="contact__info-tittle">Info</h3>
-
-                    <p class="contact__info-description">
-                        Hello recruiters, friends and acquaintances, if you wish to obtain more information regarding the projects that I am carrying out and the courses and training that I am carrying out, you can do it at:
-                    </p>
-
-                    <address class="contact__info-data">
-
-                        <div class="contact__info-item">
-                            <i class="bx bx-phone"></i>
-                            <span class="contact__info-number">(+593) 985502731</span>
-                        </div>
-
-                        <div class="contact__info-item">
-                            <i class="bx bx-envelope"></i>
-                            <span class="contact__info-mail"><a href="mailto:felosct7@outlook.com">felosct7@outlook.com</a></span>
-                        </div>
-
-                        <div class="contact__info-item">
-                            <i class='bx bxs-map'></i>
-                            <span class="contact__info-map">Esmeraldas, Ecuador</span>
-                        </div>
-
-                    </address>
-
+                  <button class="btn projects__button" type="button">
+                    <a
+                      href="https://github.com/faespana/first__ecommerce"
+                      target="_blank"
+                      >Show Code</a
+                    >
+                  </button>
                 </div>
-
-                <div class="contact__form">
-
-                    <h3 class="contact__form-title">Send a Message</h3>
-
-                    <form id="form" class="contact__form-container" data-netlify="true">
-
-                        <div class="contact__form-group">
-                            <label for="name" class="contact__form-label">Name:</label>
-                            <input name="name" type="text" id="name" class="contact__form-input" required>
-                        </div>
-
-                        <div class="contact__form-group">
-                            <label for="email" class="contact__form-label">E-mail:</label>
-                            <input name="email" type="email" id="email" class="contact__form-input" required>
-                        </div>
-
-                        <div class="contact__form-group">
-                            <label for="message" class="contact__form-label">Message:</label>
-                            <textarea name="message" id="message" cols="40" rows="10" class="contact__form-input"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn">Send</button>
-
-                    </form>
-
-                </div>
-                
+              </div>
             </div>
+          </div>
 
-        </section>
+          <div class="projects__project">
+            <!--Este es como si fuera el interior del proyecto-->
+            <div class="projects__inner grid--container">
+              <div class="projects__image">
+                <img src="assets/img/quote_helps.gif" alt="project 4" />
+              </div>
 
+              <div class="projects__info">
+                <h3 class="projects__name">Project 4</h3>
+
+                <p class="projects__description">
+                  STOP HERE 🛑!! Many times we feel frustrated because we've had
+                  a bad day 🌫️ 😶, or maybe because we had problems with a
+                  family member or a coworker 😥. And sometimes we just need to
+                  talk to someone else who gives us those words of support (the
+                  real friends are there 🤩💪🏽), or we can also read something
+                  that motivates us 🤓 .Well, I present to you a small web app
+                  made in React 💙 that I built with great messages of support
+                  from the main personalities worldwide 👳🏽‍♂️👸🏽🎅🏽🧔🏽‍♀️👩🏽‍🏫🧑🏽‍🔬👨🏽‍ 🚀. It
+                  has helped me a lot and every morning before I get up, I read
+                  some and then I feel much better and with 100% batteries
+                  😎🤓!!
+                </p>
+
+                <div class="projects__buttons">
+                  <!--Es importante colocarle el tipo ya que el navegador se puede quejar-->
+                  <button class="btn projects__button" type="button">
+                    <a
+                      href="https://incomparable-brigadeiros-eb0365.netlify.app/"
+                      target="_blank"
+                      >Show Demo</a
+                    >
+                  </button>
+
+                  <button class="btn projects__button" type="button">
+                    <a
+                      href="https://github.com/faespana/quote_cards"
+                      target="_blank"
+                      >Show Code</a
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section">
+        <h2 class="section__tittle">Contact</h2>
+
+        <div class="contact__container grid--container">
+          <div class="contact__info">
+            <h3 class="contact__info-tittle">Info</h3>
+
+            <p class="contact__info-description">
+              Hello recruiters, friends and acquaintances, if you wish to obtain
+              more information regarding the projects that I am carrying out and
+              the courses and training that I am carrying out, you can do it at:
+            </p>
+
+            <address class="contact__info-data">
+              <div class="contact__info-item">
+                <i class="bx bx-phone"></i>
+                <span class="contact__info-number">(+593) 985502731</span>
+              </div>
+
+              <div class="contact__info-item">
+                <i class="bx bx-envelope"></i>
+                <span class="contact__info-mail"
+                  ><a href="mailto:felosct7@outlook.com"
+                    >felosct7@outlook.com</a
+                  ></span
+                >
+              </div>
+
+              <div class="contact__info-item">
+                <i class="bx bxs-map"></i>
+                <span class="contact__info-map">Esmeraldas, Ecuador</span>
+              </div>
+            </address>
+          </div>
+
+          <div class="contact__form">
+            <h3 class="contact__form-title">Send a Message</h3>
+
+            <form id="form" class="contact__form-container" data-netlify="true">
+              <div class="contact__form-group">
+                <label for="name" class="contact__form-label">Name:</label>
+                <input
+                  name="name"
+                  type="text"
+                  id="name"
+                  class="contact__form-input"
+                  required
+                />
+              </div>
+
+              <div class="contact__form-group">
+                <label for="email" class="contact__form-label">E-mail:</label>
+                <input
+                  name="email"
+                  type="email"
+                  id="email"
+                  class="contact__form-input"
+                  required
+                />
+              </div>
+
+              <div class="contact__form-group">
+                <label for="message" class="contact__form-label"
+                  >Message:</label
+                >
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="40"
+                  rows="10"
+                  class="contact__form-input"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer section">
+      <div class="footer__container grid--container">
+        <div class="footer__info">
+          <h3 class="footer__tittle">Felipe España</h3>
 
-        <div class="footer__container grid--container">
-            
-            <div class="footer__info">
-
-                <h3 class="footer__tittle">Felipe España</h3>
-
-                <p class="footer__description">
-                    I'm a Front-end Developer, I like to learn about new technologies & travel around the world. Proudly ecuadorian 💛💙❤️
-                </p> 
-
-            </div>
-
-            <div class="footer__social">
-
-                <h3 class="footer__tittle">Social Networks</h3>
-
-                <ul class="footer__social-list">
-
-                    <li class="footer__social-item">
-                        <a target="_blank" href="https://www.linkedin.com/in/felipe-espa%C3%B1a-ord%C3%B3%C3%B1ez-38609197/" class="footer__social-link linkedin"><i class='bx bxl-linkedin'></i></a>
-                    </li>
-
-                    <li class="footer__social-item">
-                        <a target="_blank" href="https://www.instagram.com/faespana/" class="footer__social-link instagram"><i class='bx bxl-instagram'></i></a>
-                    </li>
-
-                    <li class="footer__social-item">
-                        <a target="_blank" href="https://github.com/faespana" class="footer__social-link github"><i class='bx bxl-github'></i></a>
-                    </li>
-
-                </ul>
-
-            </div>
-
+          <p class="footer__description">
+            I'm a Front-end Developer, I like to learn about new technologies &
+            travel around the world. Proudly ecuadorian 💛💙❤️
+          </p>
         </div>
-        
-        <p class="footer__copy">
-            &copy;2022, All rights reserved   
-        </p>
 
+        <div class="footer__social">
+          <h3 class="footer__tittle">Social Networks</h3>
+
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/felipe-espa%C3%B1a-ord%C3%B3%C3%B1ez-38609197/"
+                class="footer__social-link linkedin"
+                ><i class="bx bxl-linkedin"></i
+              ></a>
+            </li>
+
+            <li class="footer__social-item">
+              <a
+                target="_blank"
+                href="https://www.instagram.com/faespana/"
+                class="footer__social-link instagram"
+                ><i class="bx bxl-instagram"></i
+              ></a>
+            </li>
+
+            <li class="footer__social-item">
+              <a
+                target="_blank"
+                href="https://github.com/faespana"
+                class="footer__social-link github"
+                ><i class="bx bxl-github"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer__copy">&copy;2022, All rights reserved</p>
     </footer>
 
-
     <script>
-        const btnMenu = document.querySelector(".btn__open")
-        const btnClose = document.querySelector(".btn__close")
-        const Menu = document.querySelector(".navbar__menu")
+      const btnMenu = document.querySelector(".btn__open");
+      const btnClose = document.querySelector(".btn__close");
+      const Menu = document.querySelector(".navbar__menu");
 
-        btnMenu.onclick = function() {
-            Menu.classList.add("show--menu")
-        }
+      btnMenu.onclick = function () {
+        Menu.classList.add("show--menu");
+      };
 
-        btnClose.onclick = function() {
-            Menu.classList.remove("show--menu")
-        }
+      btnClose.onclick = function () {
+        Menu.classList.remove("show--menu");
+      };
     </script>
-
-</body>
+  </body>
 </html>
